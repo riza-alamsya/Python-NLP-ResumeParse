@@ -1,11 +1,9 @@
 import spacy
 import json
 
-vectorizer = CountVectorizer()
-X = vectorizer.fit_transform([data["text"] for data in training_data])
-y = [data["label"] for data in training_data]
-model = MultinomialNB()
-model.fit(X, y)
+
+nlp = spacy.load("en_core_web_sm")
+
 def parse_resume(text):
     doc = nlp(text)
     parsed_info = {"name": "", "education": [], "experience": []}
