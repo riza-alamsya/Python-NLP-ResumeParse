@@ -44,7 +44,7 @@ def parse_resume(text):
                 
     return parsed_info
 
-resume_text = "Riza Alamsya berpengalaman sebagai java developer selama 4 tahun. Saya memiliki pendidikan dari Universitas Indonesia."
+resume_text = "Riza Alamsya berpengalaman sebagai java developer selama 4 tahun. Saya memiliki pendidikan dari Universitas A."
 parsed_info = parse_resume(resume_text)
 output_json = json.dumps(parsed_info, indent=4)
 print(output_json)
