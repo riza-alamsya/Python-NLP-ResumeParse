@@ -1,15 +1,6 @@
 import spacy
 import json
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 
-nlp = spacy.load("en_core_web_sm")
-# Data pelatihan (contoh sederhana)
-training_data = [
-    {"text": "Saya lulus dari Universitas A. Saya memiliki pengalaman sebagai developer.", "label": "experience"},
-    {"text": "Saya memiliki pendidikan dari Universitas B.", "label": "education"},
-    # ... contoh data lainnya ...
-]
 vectorizer = CountVectorizer()
 X = vectorizer.fit_transform([data["text"] for data in training_data])
 y = [data["label"] for data in training_data]
